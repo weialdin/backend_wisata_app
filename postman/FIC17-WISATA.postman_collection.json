@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "7ca5b6e6-b809-4cff-8d28-72bc05f6464f",
+		"name": "FIC17-WISATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35342294"
+	},
+	"item": [
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 5|8Vzi7hZEfdoUR6C7E52XuSfNy91oVPbS6UFvA9QPa4673e0b"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@wisata.com\",\r\n    \"password\": \"adminku1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 5|8Vzi7hZEfdoUR6C7E52XuSfNy91oVPbS6UFvA9QPa4673e0b"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@wisata.com\",\r\n    \"password\": \"adminku1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 6|mzIl8Ndn3kveCXNZcKbS8WbSoOovxHnaSEmfNFo4a234267c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/api-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 6|mzIl8Ndn3kveCXNZcKbS8WbSoOovxHnaSEmfNFo4a234267c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/api-categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 6|mzIl8Ndn3kveCXNZcKbS8WbSoOovxHnaSEmfNFo4a234267c"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/which/Downloads/ax4w7407o.png"
+						},
+						{
+							"key": "name",
+							"value": "Parkir Motor",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "criteria",
+							"value": "perorangan",
+							"type": "text"
+						},
+						{
+							"key": "favorite",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "published",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "tiket parkir motor",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/api-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 6|mzIl8Ndn3kveCXNZcKbS8WbSoOovxHnaSEmfNFo4a234267c"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"category_id\":\"1\",\r\n\"name\":\"Mobil\",\r\n\"price\":\"10000\",\r\n\"criteria\":\"perorangan\",\r\n\"favorite\":1,\r\n\"status\":\"published\",\r\n\"stock\":1000,\r\n\"description\":\"tiket untuk mobil\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/api-products/102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-products",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 6|mzIl8Ndn3kveCXNZcKbS8WbSoOovxHnaSEmfNFo4a234267c"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/api-products/102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-products",
+						"102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
